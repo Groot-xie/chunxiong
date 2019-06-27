@@ -35,6 +35,9 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  created () {
+    console.log(1111, this.$axios)
   }
 }
 </script>
