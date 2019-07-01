@@ -1,11 +1,10 @@
 import Vue from 'vue'
-import './plugins/axios'
-import './plugins/loadsh'
 import App from './App.vue'
+import './plugins'
 import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
-import './styles.scss'
+import '@/assets/css/element-ui-styles.scss'
 
 Vue.use(ElementUI)
 
