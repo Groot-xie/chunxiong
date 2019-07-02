@@ -1,0 +1,15 @@
+{
+  "welcome": "Welcome to shanghai chunxiong!",
+  "language": "Language",
+  "address": {
+    "key": "Add",
+    "value": "Lane 103, si brick road, songjiang district, Shanghai."
+  },
+  "tel": "Tel",
+  "e-mail": "E-mail",
+  "postcode": "P.C",
+  "copyright": {
+    "key": "webpage copyright",
+    "value": "shanghai chunxiong company."
+  }
+}
