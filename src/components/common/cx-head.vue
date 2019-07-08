@@ -10,16 +10,67 @@
       </div>
     </div>
     <div class="middle">
-      <div class="cx-container info" />
+      <div class="cx-container info" >
+        <div class="left">
+          <img src="../../assets/img/logo.jpg" width="60">
+          <div class="word">
+            <p>上海纯雄实业有限公司</p>
+            <p>SHANGHAI CHUNXIONG STEEL CO., LTD</p>
+          </div>
+        </div>
+        <div class="right">
+          <i class="el-icon-phone-outline"></i>
+          <div>
+            <p>全国销售热线</p>
+            <span>13601668579</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="cx-container">
+        <ul>
+          <li v-for="(o, i) in menu" :key="i" @click="go(o)">{{ o.label }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      menu: [{
+        label: '网站首页',
+        path: '/'
+      }, {
+        label: '关于纯雄'
+      }, {
+        label: '资源中心'
+      }, {
+        label: '产品中心'
+      }, {
+        label: '新闻中心'
+      }, {
+        label: '纯雄服务'
+      }, {
+        label: '销售中心'
+      }, {
+        label: '人力资源'
+      }, {
+        label: '在线留言'
+      }, {
+        label: '联系我们'
+      }]
+    }
+  },
   methods: {
     changeLan (lan) {
       this.$i18n.locale = lan
+    },
+    go (o) {
+      o.path ? this.$router.push(o.path) : this.$message.error('敬请期待')
     }
   }
 }
@@ -47,8 +98,68 @@ export default {
     background-color: #F0F0F0;
     .info {
       height: 116px;
-      background: url('../../assets/img/info.jpg');
-      background-size: cover;
+      display: flex;
+      justify-content: space-between;
+      .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .word {
+          margin-left: 10px;
+          p:first-child {
+            font-weight: bold;
+            font-family:'华文琥珀', 'Arial Narrow', Arial, sans-serif;
+            font-size: 26px;
+          }
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        > div {
+          margin-left: 10px;
+          p {
+            font-size: 12px;
+          }
+        }
+        i {
+          padding: 10px;
+          border-radius: 50%;
+          font-size: 30px;
+          background-color: orange;
+          color: #fff;
+        }
+        span {
+          font-size: 20px;
+          font-weight: 700;
+          color: orange;
+        }
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    background-color: #E5E5E5;
+    border-top: 1px solid #fff;
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        height: 43px;
+        padding: 0 22px;
+        line-height: 43px;
+        color: #666;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover {
+          color: #fff;
+          background-color: orange;
+        }
+      }
     }
   }
 </style>
