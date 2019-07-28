@@ -1,11 +1,13 @@
 <template>
   <div>
     <!-- 轮播图 -->
-    <el-carousel height="560px">
-      <el-carousel-item v-for="item in banners" :key="item">
-        <img :src="require(`@/assets/img/${item}`)">
-      </el-carousel-item>
-    </el-carousel>
+    <div class="carousel">
+      <el-carousel :height="imgHeight">
+        <el-carousel-item v-for="item in banners" :key="item">
+          <img ref="carousel_img" :src="require(`@/assets/img/${item}`)">
+        </el-carousel-item>
+      </el-carousel>
+    </div>
     <!-- 产品中心 -->
     <div class="product-center">
       <div class="cx-container">
@@ -51,10 +53,34 @@
               <p>联系我们</p>
               <p>CONTACT US</p>
             </div>
-            <div class="right-side"></div>
+            <div class="right-side">13601668579</div>
           </div>
         </div>
-        <div class="right"></div>
+        <div class="middle"></div>
+        <div class="right">
+          <div class="top">
+            <div class="news">
+              行业新闻
+              <i>Q&A</i>
+              <div class="line-one"></div>
+            </div>
+            <div class="more">更多>>></div>
+          </div>
+          <ul>
+            <li>
+              <p><i class="el-icon-chat-dot-round" />钢铁领跌商品期货 动力煤逆势</p>
+              <p><i class="el-icon-user-solid "/>网易财经5月19日讯 商品期货现在普遍走低。其中，铁矿石跌2...</p>
+            </li>
+            <li>
+              <p><i class="el-icon-chat-dot-round" />中国钢材价格近期会继续上涨吗</p>
+              <p><i class="el-icon-user-solid "/>近期铁矿石期货价格企稳反向弹，螺纹钢期货价格也止跌盘整。分析...</p>
+            </li>
+            <li>
+              <p><i class="el-icon-chat-dot-round" />2018年建材行业运行情况</p>
+              <p><i class="el-icon-user-solid "/>2018年，全国水泥产量217667万吨，比上年增长百分之3...</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -65,6 +91,7 @@ export default {
   data () {
     return {
       banners: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+      imgHeight: '560px',
       type: 'tubular',
       products: [{
         type: 'tubular',
@@ -136,11 +163,21 @@ export default {
   },
   methods: {
 
+  },
+  mounted () {
+    this.$refs.carousel_img[0].onload = () => {
+      this.imgHeight = this.$refs.carousel_img[0].height + 'px'
+    }
   }
 }
 </script>
 
 <style scoped lang='scss'>
+  .carousel {
+    img {
+      width: 100%;
+    }
+  }
   .product-center {
     height: 576px;
     background-color: #2D2E32;
@@ -221,25 +258,26 @@ export default {
   .other {
     .other-content {
       display: flex;
-      .left {
-        flex: 3.5;
-        .about-us {
-          position: relative;
-          display: inline-block;
-          padding: 20px 0;
-          border-bottom: 4px solid #000;
-          font-size: 16px;
-          i {
-            color: #757575;
-            font-size: 12px;
-          }
-          .line-one {
-            position: absolute;
-            bottom: -4px;
-            width: 30px;
-            border-bottom: 4px solid #BB0000;
-          }
+      .about-us,
+      .news {
+        position: relative;
+        display: inline-block;
+        padding: 20px 0;
+        border-bottom: 4px solid #000;
+        font-size: 16px;
+        i {
+          color: #757575;
+          font-size: 12px;
         }
+        .line-one {
+          position: absolute;
+          bottom: -4px;
+          width: 30px;
+          border-bottom: 4px solid #BB0000;
+        }
+      }
+      .left {
+        flex: 4;
         .introduction {
           border-top: 2px solid #CCCCCC;
           padding: 20px 0 20px 155px;
@@ -256,33 +294,80 @@ export default {
         .contact-us {
           display: flex;
           height: 80px;
+          color: #fff;
+          text-align: center;
           .left-side {
+            position: relative;
             padding: 20px 0;
             flex: 3;
-            color: #fff;
-            text-align: center;
             background-color: #BB0000;
             p:last-child {
               font-size: 12px;
             }
             &::after {
               content: '';
-              width: 0;
-              height: 0;
-              border-top: 10px solid green;
-              border-bottom: 10px solid green;
-              border-left: 10px solid green;
-              // border-color: transparent;
-              // border-right-color: green;
+              position: absolute;
+              right: -20px;
+              top: 50%;
+              transform: translateY(-50%);
+              border: 10px solid;
+              border-color: transparent;
+              border-left-color: #BB0000;
+              width: 0px;
+              height: 0px;
             }
           }
           .right-side {
             flex: 7;
+            line-height: 80px;
+            font-size: 30px;
+            background-color: #2D2E32;
           }
         }
       }
       .right {
-        flex: 6.5;
+        flex: 6;
+        ul {
+          list-style: none;
+          border-top: 2px solid #CCCCCC;
+          margin-top: -1px;
+          font-size: 14px;
+          li {
+            &:hover {
+              p:first-child {
+                color: #BB0000;
+              }
+            }
+            cursor: pointer;
+            padding: 20px 0;
+            border-bottom: 1px dashed #CCCCCC;
+            i {
+              margin-right: 10px;
+            }
+            p:first-child {
+              margin-bottom: 10px;
+              &:hover {
+                color: #BB0000;
+              }
+            }
+            p:nth-child(2) {
+              color: #666;
+            }
+          }
+        }
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        .more {
+          cursor: pointer;
+          padding: 20px 0;
+          font-size: 12px;
+          color: #666666;
+        }
+      }
+      .middle {
+        flex: 0.7;
       }
     }
   }

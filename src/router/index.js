@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/home'
 import Index from '@/page/main'
+import About from '@/page/about'
+import AboutUs from '@/page/about/about-us'
+import Culture from '@/page/about/culture'
 Vue.use(Router)
 
 export default new Router({
@@ -13,6 +16,17 @@ export default new Router({
       children: [{
         path: '/',
         component: Index
+      }, {
+        path: '/about',
+        component: About,
+        redirect: '/about/about-us',
+        children: [{
+          path: '/about/about-us',
+          component: AboutUs
+        }, {
+          path: '/about/culture',
+          component: Culture
+        }]
       }]
     }
     // {

@@ -45,7 +45,8 @@ export default {
         label: '网站首页',
         path: '/'
       }, {
-        label: '关于纯雄'
+        label: '关于纯雄',
+        path: '/about'
       }, {
         label: '资源中心'
       }, {
