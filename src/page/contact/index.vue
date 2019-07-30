@@ -21,19 +21,14 @@ export default {
     return {
       asideData: {
         title: {
-          ch: '关于纯雄',
-          en: 'ABOUT CHUNXIONG'
+          ch: '联系我们',
+          en: 'CONTACT US'
         },
         list: [
           {
             id: 1,
-            title: '公司简介',
-            path: '/about/about-us'
-          },
-          {
-            id: 2,
-            title: '企业文化',
-            path: '/about/culture'
+            title: '联系我们',
+            path: '/contact/contact-us'
           }
         ]
       }
@@ -48,7 +43,7 @@ export default {
 <style scoped lang='scss'>
   .banner {
     height: 200px;
-    background: url('../../assets/img/banner1.png') no-repeat center;
+    background: url('../../assets/img/banner6.png') no-repeat center;
     background-size: cover;
   }
   .main {

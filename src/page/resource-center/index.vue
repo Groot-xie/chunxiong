@@ -21,19 +21,18 @@ export default {
     return {
       asideData: {
         title: {
-          ch: '关于纯雄',
-          en: 'ABOUT CHUNXIONG'
+          ch: '资源中心',
+          en: 'RESOURCE CENTER'
         },
         list: [
           {
             id: 1,
-            title: '公司简介',
-            path: '/about/about-us'
-          },
-          {
+            title: '公司产品索引',
+            path: '/resource/product-indexes'
+          }, {
             id: 2,
-            title: '企业文化',
-            path: '/about/culture'
+            title: '不锈钢无缝管定义',
+            path: '/resource/product-definition'
           }
         ]
       }
@@ -48,7 +47,7 @@ export default {
 <style scoped lang='scss'>
   .banner {
     height: 200px;
-    background: url('../../assets/img/banner1.png') no-repeat center;
+    background: url('../../assets/img/banner2.png') no-repeat center;
     background-size: cover;
   }
   .main {

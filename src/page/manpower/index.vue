@@ -21,19 +21,22 @@ export default {
     return {
       asideData: {
         title: {
-          ch: '关于纯雄',
-          en: 'ABOUT CHUNXIONG'
+          ch: '人力资源',
+          en: 'HUMAN RESOURCES'
         },
         list: [
           {
             id: 1,
-            title: '公司简介',
-            path: '/about/about-us'
-          },
-          {
+            title: '招聘制度',
+            path: '/manpower/recruitment'
+          }, {
             id: 2,
-            title: '企业文化',
-            path: '/about/culture'
+            title: '培训体系',
+            path: '/manpower/training-system'
+          }, {
+            id: 3,
+            title: '招贤纳士',
+            path: '/manpower/join-us'
           }
         ]
       }
@@ -48,7 +51,7 @@ export default {
 <style scoped lang='scss'>
   .banner {
     height: 200px;
-    background: url('../../assets/img/banner1.png') no-repeat center;
+    background: url('../../assets/img/banner5.png') no-repeat center;
     background-size: cover;
   }
   .main {

@@ -8,7 +8,7 @@
     <ul class="list">
       <li :class="{active: $route.path === item.path}" v-for="item in list" @click="goPage(item)" :key="item.id">{{ item.title }}</li>
     </ul>
-    <img :src="require(`@/assets/img/${img}`)" width="100%">
+    <img :src="require('@/assets/img/246c8879_6aa6_490e_a268_9e92cc4bb628.jpg')" width="100%">
     <div class="desc">
       <p>地址：上海市松江钢材城E109</p>
       <p>电话：13601668579</p>
@@ -22,8 +22,7 @@
 export default {
   props: {
     title: Object,
-    list: Array,
-    img: String
+    list: Array
   },
   methods: {
     goPage (item) {

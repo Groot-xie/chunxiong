@@ -21,19 +21,26 @@ export default {
     return {
       asideData: {
         title: {
-          ch: '关于纯雄',
-          en: 'ABOUT CHUNXIONG'
+          ch: '纯雄服务',
+          en: 'CHUNXIONG SERVICE'
         },
         list: [
           {
             id: 1,
-            title: '公司简介',
-            path: '/about/about-us'
-          },
-          {
+            title: '仓储物流',
+            path: '/service/warehouse-logistics'
+          }, {
             id: 2,
-            title: '企业文化',
-            path: '/about/culture'
+            title: '加工中心',
+            path: '/service/machining-center'
+          }, {
+            id: 3,
+            title: '服务承诺',
+            path: '/service/service-promise'
+          }, {
+            id: 4,
+            title: '客户服务',
+            path: '/service/customer-service'
           }
         ]
       }
@@ -48,7 +55,7 @@ export default {
 <style scoped lang='scss'>
   .banner {
     height: 200px;
-    background: url('../../assets/img/banner1.png') no-repeat center;
+    background: url('../../assets/img/banner4.png') no-repeat center;
     background-size: cover;
   }
   .main {
@@ -64,6 +71,15 @@ export default {
         padding-left: 30px;
       }
     }
-
+  }
+</style>
+<style lang="scss">
+  .content {
+    font-size: 14px;
+    padding: 30px 20px;
+    text-indent: 2em;
+    color: #666;
+    line-height: 26px;
+    word-spacing: 1px;
   }
 </style>

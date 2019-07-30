@@ -21,19 +21,26 @@ export default {
     return {
       asideData: {
         title: {
-          ch: '关于纯雄',
-          en: 'ABOUT CHUNXIONG'
+          ch: '产品中心',
+          en: 'PRODUCT CENTER'
         },
         list: [
           {
             id: 1,
-            title: '公司简介',
-            path: '/about/about-us'
-          },
-          {
+            title: '管材系列',
+            path: '/product/pipe'
+          }, {
             id: 2,
-            title: '企业文化',
-            path: '/about/culture'
+            title: '型材系列',
+            path: '/product/section'
+          }, {
+            id: 3,
+            title: '板材系列',
+            path: '/product/board'
+          }, {
+            id: 4,
+            title: '消防配件',
+            path: '/product/firefighting'
           }
         ]
       }
@@ -48,7 +55,7 @@ export default {
 <style scoped lang='scss'>
   .banner {
     height: 200px;
-    background: url('../../assets/img/banner1.png') no-repeat center;
+    background: url('../../assets/img/banner3.png') no-repeat center;
     background-size: cover;
   }
   .main {

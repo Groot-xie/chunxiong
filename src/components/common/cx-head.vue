@@ -48,21 +48,24 @@ export default {
         label: '关于纯雄',
         path: '/about'
       }, {
-        label: '资源中心'
+        label: '资源中心',
+        path: '/resource'
       }, {
-        label: '产品中心'
+        label: '产品中心',
+        path: '/product'
       }, {
         label: '新闻中心'
       }, {
-        label: '纯雄服务'
+        label: '纯雄服务',
+        path: '/service'
       }, {
-        label: '销售中心'
-      }, {
-        label: '人力资源'
+        label: '人力资源',
+        path: '/manpower'
       }, {
         label: '在线留言'
       }, {
-        label: '联系我们'
+        label: '联系我们',
+        path: '/contact'
       }]
     }
   },
@@ -71,7 +74,7 @@ export default {
       this.$i18n.locale = lan
     },
     go (o) {
-      o.path ? this.$router.push(o.path) : this.$message.error('敬请期待')
+      o.path ? this.$router.push(o.path) : this.$message.error('维护中,请谅解！')
     }
   }
 }

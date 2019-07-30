@@ -31,7 +31,7 @@
               </div>
             </div>
             <p>{{ item.description }}</p>
-            <el-button size="small">查看</el-button>
+            <el-button size="small" @click="goProduct(item)">查看</el-button>
           </li>
         </ul>
       </div>
@@ -162,7 +162,22 @@ export default {
     }
   },
   methods: {
-
+    goProduct () {
+      switch (this.type) {
+        case 'tubular':
+          this.$router.push('/product/pipe')
+          break
+        case 'section':
+          this.$router.push('/product/section')
+          break
+        case 'board':
+          this.$router.push('/product/board')
+          break
+        case 'firefighting':
+          this.$router.push('/product/firefighting')
+          break
+      }
+    }
   },
   mounted () {
     this.$refs.carousel_img[0].onload = () => {
