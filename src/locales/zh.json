@@ -3,13 +3,23 @@
   "language": "语言选择",
   "address": {
     "key": "地址",
-    "value": "上海市松江区松江钢材城E109."
+    "value": "上海市松江区松江钢材城E109"
   },
   "tel": "电话",
   "e-mail": "邮箱",
   "postcode": "邮编",
   "copyright": {
     "key": "页面版权",
-    "value": "上海纯雄实业有限公司."
-  }
+    "value": "上海纯雄实业有限公司"
+  },
+  "home": "网站首页",
+  "about": "关于纯雄",
+  "resources": "资源中心",
+  "product": "产品中心",
+  "news": "新闻中心",
+  "service": "纯雄服务",
+  "manpower": "人力资源",
+  "message": "在线留言",
+  "contact": "联系我们",
+  "sales": "全国销售热线"
 }

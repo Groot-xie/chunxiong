@@ -3,13 +3,23 @@
   "language": "Language",
   "address": {
     "key": "Add",
-    "value": "Lane 103, si brick road, songjiang district, Shanghai."
+    "value": "Lane 103, si brick road, songjiang district, Shanghai"
   },
   "tel": "Tel",
   "e-mail": "E-mail",
   "postcode": "P.C",
   "copyright": {
     "key": "webpage copyright",
-    "value": "shanghai chunxiong company."
-  }
+    "value": "shanghai chunxiong company"
+  },
+  "home": "Home",
+  "about": "About Us",
+  "resources": "Resources",
+  "product": "Product",
+  "news": "News",
+  "service": "Service",
+  "manpower": "Human Resources",
+  "message": "Message",
+  "contact": "Contact Us",
+  "sales": "Sales hotline"
 }

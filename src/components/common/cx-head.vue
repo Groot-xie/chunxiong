@@ -21,7 +21,7 @@
         <div class="right">
           <i class="el-icon-phone-outline"></i>
           <div>
-            <p>全国销售热线</p>
+            <p>{{ $t("sales") }}</p>
             <span>13601668579</span>
           </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="nav">
       <div class="cx-container">
         <ul>
-          <li v-for="(o, i) in menu" :key="i" @click="go(o)">{{ o.label }}</li>
+          <li v-for="(o, i) in menu" :key="i" @click="go(o)">{{ $t(o.label) }}</li>
         </ul>
       </div>
     </div>
@@ -42,29 +42,29 @@ export default {
   data () {
     return {
       menu: [{
-        label: '网站首页',
+        label: 'home',
         path: '/'
       }, {
-        label: '关于纯雄',
+        label: 'about',
         path: '/about'
       }, {
-        label: '资源中心',
+        label: 'resources',
         path: '/resource'
       }, {
-        label: '产品中心',
+        label: 'product',
         path: '/product'
       }, {
-        label: '新闻中心'
+        label: 'news'
       }, {
-        label: '纯雄服务',
+        label: 'service',
         path: '/service'
       }, {
-        label: '人力资源',
+        label: 'manpower',
         path: '/manpower'
       }, {
-        label: '在线留言'
+        label: 'message'
       }, {
-        label: '联系我们',
+        label: 'contact',
         path: '/contact'
       }]
     }
@@ -74,7 +74,12 @@ export default {
       this.$i18n.locale = lan
     },
     go (o) {
-      o.path ? this.$router.push(o.path) : this.$message.error('维护中,请谅解！')
+      o.path
+        ? this.$router.push(o.path)
+        : this.$message.error(this.$i18n.locale === 'zh'
+          ? '维护中,请谅解！'
+          : 'Under maintenance, please understand!'
+        )
     }
   }
 }

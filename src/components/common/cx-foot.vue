@@ -4,9 +4,9 @@
     <div class="main">
       <div class="cx-container" style="display: flex; justify-content: space-between;">
         <div class="info">
-          <p>{{ $t('address.key') }}：{{ $t('address.value') }} {{ $t('tel') }}：13601668579</p>
-          <p>{{ $t('e-mail') }}： wxhycgs@163.com. {{ $t('postcode') }}：201600</p>
-          <p>{{ $t('copyright.key') }}：{{ $t('copyright.value') }} 苏ICP备11068307号</p>
+          <p>{{ $t('address.key') }}：{{ $t('address.value') }} &nbsp; {{ $t('tel') }}：13601668579</p>
+          <p>{{ $t('e-mail') }}： 13601668579@139.com  &nbsp; {{ $t('postcode') }}：201600</p>
+          <p>{{ $t('copyright.key') }}：{{ $t('copyright.value') }} &nbsp; 沪ICP备19027133号-1</p>
         </div>
         <div class="erweima">
           <img src="../../assets/img/erweima.jpg" alt="" width="116">
